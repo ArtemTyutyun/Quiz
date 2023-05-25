@@ -1,0 +1,67 @@
+.app {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #333;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 35px;
+}
+
+.ques {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+.quiz {
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.quiz-option p {
+  margin-bottom: 5px;
+}
+
+.select-button {
+  background-color: turquoise;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 5px;
+  height: 55px;
+  width: 150px;
+}
+
+.select-div {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.question-counter {
+    color: #666;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+  }
