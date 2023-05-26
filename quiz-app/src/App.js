@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Quiz from './Quiz';
 import { quizData } from './quizData';
 import './App.css';
 
 const App = () => {
-  const [score, setScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [quizCompleted, setQuizCompleted] = useState(false);
+  const score = useSelector(state => state.score);
+  const currentQuestion = useSelector(state => state.currentQuestion);
+  const quizCompleted = useSelector(state => state.quizCompleted);
+  const dispatch = useDispatch();
 
   const handleAnswer = (isCorrect) => {
     if (isCorrect) {
-      setScore(score + 1);
+      dispatch({ type: 'INCREMENT_SCORE' });
     }
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < quizData.length) {
-      setCurrentQuestion(nextQuestion);
+      dispatch({ type: 'SET_CURRENT_QUESTION', payload: nextQuestion });
     } else {
-      setQuizCompleted(true);
+      dispatch({ type: 'COMPLETE_QUIZ' });
     }
   };
 
